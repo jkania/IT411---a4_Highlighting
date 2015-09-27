@@ -1,0 +1,61 @@
+<!doctype html>
+<head>
+  <meta charset="utf-8">
+  <title>IT 411 - Jennifer Kania - Highlighting on and off</title>
+  <link href="stylesheets/standard.css" rel="stylesheet">
+  <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+  <script>
+    $(function() {
+   
+      $("#highlight").click(function() {
+          if ($(this).hasClass("highlightable_btn")){
+                $(this).html("Unhighlight");
+                $(this).removeClass("highlightable_btn");
+                $(this).addClass("highlighted_btn");
+                $("span.highlightable").each(function() {
+                  $(this).removeClass('highlightable');
+                  $(this).addClass('highlighted');
+                }); // end each
+          }
+              else {
+                  $(this).removeClass("highlighted_btn");
+                  $(this).addClass("highlightable_btn");
+                  $(this).html("Highlight");
+                  $("span.highlighted").each(function() {
+                      $(this).removeClass("highlighted");
+                      $(this).addClass("highlightable");
+                  });//end each
+              }
+                  
+      });
+
+    }); //end function
+      
+  </script>
+</head>
+<body>
+<h1>IT 411 - Jennifer Kania - A4 - Highlighting on and off</h1>
+<hr />
+
+<div id="introduction">
+    <button id="highlight" class="highlightable_btn">Highlight</button>
+<p id="paragraph1">
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed congue vestibulum elementum. Ut et turpis sit amet nisi vehicula aliquam. <span class="highlightable">Integer imperdiet mauris a nisl lobortis cursus mattis est blandit.</span> Sed a vulputate risus. Donec adipiscing sagittis libero, sed tristique nisi gravida vitae. Mauris eu justo tellus, eget consectetur mauris. Phasellus ut nisl vitae ipsum fringilla dignissim. Pellentesque commodo, libero in vulputate aliquam, mi tortor dignissim odio, ac luctus justo turpis non massa. Vivamus vitae laoreet est. Donec eleifend pharetra leo, sit amet vulputate quam ornare nec. Phasellus ut fermentum enim.
+</p>
+<p id="paragraph2">
+Curabitur aliquet consequat elementum. Duis neque justo, cursus id rutrum eu, lobortis a justo. Nam ornare ante ac massa tincidunt commodo. Donec imperdiet dictum augue ac convallis. Nullam magna felis, imperdiet nec laoreet sed, dignissim et mauris. Praesent molestie ultrices gravida. Vivamus mauris ligula, gravida non hendrerit euismod, dictum et lorem. Ut euismod, augue eu commodo adipiscing, odio magna aliquam tellus, eu malesuada felis leo nec eros. Vivamus in elit justo, eget tincidunt elit. <span class="highlightable">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span> Quisque ultricies, nulla eget porttitor hendrerit, sem purus tincidunt ligula, et vestibulum risus purus eget massa. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas porta nunc eget sem dapibus tincidunt.
+</p>
+</div>
+<div id="mainbody">
+<p id="paragraph3">
+Suspendisse potenti. Morbi vel est sem, ut sagittis orci. In hac habitasse platea dictumst. Sed vel ligula nunc, vitae aliquam lectus. Nam accumsan, turpis a tempor feugiat, erat nisl ultrices tortor, sed suscipit erat ante in sem. Nunc malesuada commodo elementum. <span class="highlightable">Nunc tempor sagittis nunc vitae blandit.</span> Integer interdum odio ut nulla interdum commodo pretium nibh pellentesque. Vestibulum iaculis, arcu nec semper facilisis, mauris erat consectetur quam, id ornare metus nibh hendrerit erat. Suspendisse facilisis sollicitudin orci a adipiscing. Praesent nisl libero, scelerisque sit amet eleifend non, porta a arcu.
+</p>
+<p id="paragraph4">
+Nam tortor libero, consequat at tristique interdum, suscipit sed urna. Pellentesque tortor justo, egestas eu tempus tempor, elementum sed dui. Quisque at tellus in justo vehicula egestas. Mauris sed sapien eget risus rutrum vehicula. Quisque at ullamcorper eros. <span class="highlightable">Phasellus ut velit vitae tortor dictum vehicula.</span> Vestibulum lacinia luctus lacus non ultricies. Nam a dolor vel turpis congue molestie. Vivamus lobortis mauris sit amet magna vestibulum semper. Phasellus adipiscing nisl et orci pulvinar tincidunt. Nullam metus est, fringilla non pretium quis, pellentesque non orci. Nunc consectetur adipiscing dolor nec semper. In et aliquet sem.
+</p>
+</div>
+<div>
+<footer>Created by Jennifer Kania</footer>
+    </div>
+</body>
+</html>

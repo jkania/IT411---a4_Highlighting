@@ -1,0 +1,19 @@
+body {
+  font-family: Arial Narrow;
+}
+
+.odd {
+  background-color: yellow;
+}
+
+#introduction {
+  font-style: italic;
+}
+
+#conclusion {
+  font-weight: bold;
+}
+
+.highlighted {
+  background-color: yellow;
+}
